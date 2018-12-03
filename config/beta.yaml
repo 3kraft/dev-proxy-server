@@ -1,0 +1,3 @@
+proxy:
+  /:
+    target: https://beta.oeamtc.at

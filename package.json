@@ -1,0 +1,31 @@
+{
+  "name": "dev-proxy-server",
+  "version": "1.0.0",
+  "description": "A configurable proxy server for development.",
+  "main": "dev-proxy-server.js",
+  "private": true,
+  "bin": {
+    "dev-proxy-server": "./dev-proxy-server.js"
+  },
+  "scripts": {
+    "start": "./dev-proxy-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@tvcs.local.lan/mnt/git/dev-proxy-server.git"
+  },
+  "keywords": [
+    "oeamtc",
+    "proxy",
+    "sso"
+  ],
+  "author": "Jan Illetschko <jan.illetschko@3kraft.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "config": "^3.0.0",
+    "express": "^4.16.4",
+    "http-proxy-middleware": "^0.19.1",
+    "js-yaml": "^3.12.0",
+    "selfsigned": "^1.10.4"
+  }
+}
