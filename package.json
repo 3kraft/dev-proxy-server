@@ -8,7 +8,8 @@
     "dev-proxy-server": "./dev-proxy-server.js"
   },
   "scripts": {
-    "start": "./dev-proxy-server.js"
+    "start": "./dev-proxy-server.js",
+    "docker_build": "docker build --rm -t 3kraft/$npm_package_name:$npm_package_version -t 3kraft/$npm_package_name:latest  -t ghcr.io/3kraft/$npm_package_name:$npm_package_version -t ghcr.io/3kraft/$npm_package_name:latest ."
   },
   "repository": {
     "type": "git",
