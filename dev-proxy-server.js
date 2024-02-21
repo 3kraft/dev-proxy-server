@@ -11,7 +11,7 @@ const debug = require("debug");
 const log = debug("dev-proxy-server:main");
 
 process.env["NODE_CONFIG_DIR"] =
-  process.env["NODE_CONFIG_DIR"] || __dirname + "/config";
+  process.env["NODE_CONFIG_DIR"] || path.join(__dirname, "config");
 log("using config dir:", process.env["NODE_CONFIG_DIR"]);
 
 process.env["NODE_ENV"] = process.env["NODE_ENV"] || "development";
@@ -21,7 +21,7 @@ log("node app instance:", process.env["NODE_APP_INSTANCE"] || "");
 const config = require("config");
 
 const httpsOptions = function () {
-  const certPath = path.join(__dirname, "./ssl/server.pem");
+  const certPath = path.join(process.env["NODE_CONFIG_DIR"], "..", "ssl", "server.pem");
 
   if (!fs.existsSync(certPath)) {
     const attrs = [{ name: "commonName", value: "localhost" }];
